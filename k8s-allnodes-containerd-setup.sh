@@ -35,7 +35,7 @@ sudo tar Cxzvf /usr/local containerd-${containerd_version}-linux-amd64.tar.gz
 
 # Installing the latest version of runc 
 runc_version=$(curl -s https://api.github.com/repos/opencontainers/runc/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')
-wget wget https://github.com/opencontainers/runc/releases/download/${runc_version}/runc.amd64
+wget https://github.com/opencontainers/runc/releases/download/${runc_version}/runc.amd64
 sudo install -m 755 runc.amd64 /usr/local/sbin/runc
 
 # Download the latest version of the CNI 
