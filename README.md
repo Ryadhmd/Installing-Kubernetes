@@ -46,22 +46,21 @@ sudo systemctl restart kubelet
 ```
 ## 3- Setup Kubectl & Install a network plugin 
 
-run these to setup kubectl to be able to manage the cluster 
+To manage the Kubernetes cluster, you need to set up kubectl. Run the following commands to create a directory for kubectl configuration, copy the admin.conf file to the directory, and change the ownership of the configuration file
 ```bash
 mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
-
-Still on the controll plane install Calico to allow pod networking :
+After setting up kubectl, you can install a network plugin. For example, you can use Calico for pod networking by running the following command on the control plane:
 ```bash
 curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml -O
 kubectl apply -f calico.yaml
 ```
 
-## 4- Join the workers nodes 
+## 4- Join the worker nodes 
 
-If everything worked fine just use on each node the command outputed by the kubeadm init at the step 1. It should look like this :
+If the control plane setup completed successfully, you can join the worker nodes to the cluster by running the command output by kubeadm init in step 1. The command should look like this:
 ```bash
 kubeadm join 10.0.2.15:6443 --token 0ks9ue.z3azsbowa7lkwxm7 \
 --discovery-token-ca-cert-hash sha256:865200c503b7e2da05bd51a9f7fbce84b3f467a08b9aa614f36ce7fc40250a24
