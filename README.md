@@ -21,8 +21,7 @@ it may be due to a problem with the CNI failing to load the config. Here is a so
 a- Download the setup CNI file
 
 ```bash
-curl https://raw.githubusercontent.com/containerd/containerd/main/script/setup/install-cni \ 
-| sudo tee $HOME/install-cni
+curl https://raw.githubusercontent.com/containerd/containerd/main/script/setup/install-cni | sudo tee $HOME/install-cni
 ```
 b- Install Go 
 ```bash
