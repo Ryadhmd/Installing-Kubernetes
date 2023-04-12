@@ -1,3 +1,4 @@
+#! /bin/bash -e
 git clone https://github.com/nginxinc/kubernetes-ingress.git --branch v3.1.0
 cd kubernetes-ingress/
 cd deployments/

@@ -7,3 +7,5 @@ source /usr/share/bash-completion/bash_completion
 source ~/.bashrc
 
 echo 'source <kubectl completion bash)' >>~/.bashrc
+
+source ~/.bashrc
