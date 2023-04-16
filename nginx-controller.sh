@@ -1,5 +1,5 @@
 #! /bin/bash -e
-git clone https://github.com/nginxinc/kubernetes-ingress.git --branch v3.1.0
+git clone https://github.com/nginxinc/kubernetes-ingress.git 
 cd kubernetes-ingress/
 cd deployments/
 kubectl apply -f common/ns-and-sa.yaml
