@@ -5,6 +5,6 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/${latest
 
 kubectl apply -f dashboard-user.yaml
 
-kubectl -n kubernetes-dashboard create token dashboard-user 
+kubectl create token dashboard-user 
 
-echo "RUN: kubectl proxy, to enable access to the Dashboard"
+echo "RUN: kubectl proxy, to enable access to the Dashboard\n"
