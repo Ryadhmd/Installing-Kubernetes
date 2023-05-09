@@ -1,6 +1,6 @@
 # Installing-Kubernetes
 
-This repository serves as a cheat sheet for installing Kubernetes. 
+This repository serves as a cheat sheet for installing Kubernetes and the differents tools needed to the Cluster management. 
 
 ## 1- Installing tools on all nodes: 
 
