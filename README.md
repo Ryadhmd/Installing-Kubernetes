@@ -4,7 +4,7 @@ This repository serves as a cheat sheet for installing Kubernetes and the differ
 
 ## 1- Installing tools on all nodes: 
 
-The k8s-allnodes-containerd-setup.sh script installs all the necessary tools to set up Kubernetes with Kubeadm. 
+The `k8s-allnodes-containerd-setup.sh` script installs all the necessary tools to set up Kubernetes with Kubeadm. 
 After running it on the control plane and worker nodes, simply run on the control plane:
 
 ```bash
